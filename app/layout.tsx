@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Jost } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/ThemeProvider";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -28,16 +27,9 @@ export default function RootLayout({
         <link rel="icon" href="/logo.jpg" type="image/jpeg" />
       </head>
       <body className={font.className}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="light"
-          enableSystem
-          disableTransitionOnChange
-        >
           <Header />
           {children}
           <Footer />
-        </ThemeProvider>
       </body>
     </html>
   );
